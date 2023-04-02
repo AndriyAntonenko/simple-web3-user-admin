@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  backend:
+    build: ./packages/backend
+    restart: on-failure:10
+    environment:
+      WHITELIST_OWNER_PK: "${WHITELIST_OWNER_PK}"
+      NODE_URL: "${NODE_URL}"
+      WHITELIST_CONTRACT_ADDRESS: "${WHITELIST_CONTRACT_ADDRESS}"
+      PORT: "3000"
+      HOST: "0.0.0.0"
+    ports:
+      - 3000:3000
+  client:
+    build: ./packages/client
+    restart: on-failure:10
+    environment:
+      REACT_APP_API_URL: "http://127.0.0.1:3000"
+      REACT_APP_NODE_URL: "${NODE_URL}"
+      REACT_APP_WHITELIST_CONTRACT_ADDRESS: "${WHITELIST_CONTRACT_ADDRESS}"
+    ports:
+      - 3001:80

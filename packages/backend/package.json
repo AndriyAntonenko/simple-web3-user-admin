@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend http server",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node build/index.js"
+  },
+  "author": "AndriyAntonenko",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ethers": "5.7.0",
+    "fastify": "^4.15.0",
+    "@fastify/cors": "^8.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "typescript": "^5.0.3"
+  }
+}
