@@ -1,0 +1,6 @@
+{
+  "name": "simple-users-admin-dashboard",
+  "workspaces": [
+    "packages/contracts"
+  ]
+}
