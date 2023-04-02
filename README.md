@@ -4,7 +4,7 @@ This is simple dashboard allows you to whitelist users in the smart-contract in 
 
 ### How to run? 🤔
 
-Firstly, you should deploy your own version of smart-contract. Here is the steps to do it:
+Firstly, you should deploy your own version of smart-contract to the goerli network. Here is the steps to do it:
 
 ```sh
 # install all dependencies
@@ -25,3 +25,5 @@ After, that create `.env` file in the root of the project, and fill it by variab
 ```sh
 docker-compose --env-file .env up
 ```
+
+Now go to the [client page](http://127.0.0.1:3001)
