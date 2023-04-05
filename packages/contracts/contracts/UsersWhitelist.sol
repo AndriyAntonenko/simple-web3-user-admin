@@ -26,6 +26,7 @@ contract UsersWhitelist is Ownable {
 
     function remove(address user) external onlyOwner {
         delete whitelist[user];
+        emit WhitelistUpdated(user, block.timestamp, false, true);
     }
 
     function verify(address user) external view returns (bool) {
